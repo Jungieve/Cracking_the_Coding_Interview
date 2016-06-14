@@ -11,15 +11,11 @@ import static org.junit.Assert.*;
  */
 public class Reciprocal_KTest {
     Reciprocal_K reciprocal_k = new Reciprocal_K();
-    ListNode listNode ;
+    ListNodeSequence listNodeSequence;
     int result;
     @Before
     public void setUp() throws Exception {
-        listNode = new ListNode(0);
-        listNode.next = new ListNode(1);
-        listNode.next.next = new ListNode(2);
-        listNode.next.next.next = new ListNode(3);
-        listNode.next.next.next.next = new ListNode(4);
+        listNodeSequence = new ListNodeSequence(new int[]{1,2,3,4,5});
     }
 
     @After
@@ -29,6 +25,6 @@ public class Reciprocal_KTest {
 
     @Test
     public void testFindKthToTail() throws Exception {
-        result = reciprocal_k.FindKthToTail(listNode,2).val;
+        result = reciprocal_k.FindKthToTail(listNodeSequence.head,2).val;
     }
 }
