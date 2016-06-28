@@ -26,5 +26,7 @@ public class RemoveTest {
     public void testRemoveNode() throws Exception {
         ListNode head = listNodeSequence.head;
         remove.removeNode(head,new ListNode(5));
+        remove.removeNode(head,new ListNode(1));
+        remove.removeNode(head,new ListNode(3));
     }
 }
