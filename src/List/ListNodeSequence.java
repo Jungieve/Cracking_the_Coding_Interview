@@ -4,7 +4,7 @@ package List;
  * Created by ZihanCong on 16/6/15.
  */
 public class ListNodeSequence {
-    ListNode insertedNode = null;
+    private ListNode insertedNode = null;
     ListNode head = null;
     public ListNodeSequence(int[] t) {
         for (int i = 0;i<t.length;i++) {
