@@ -13,7 +13,7 @@ public class MyStackTest {
     MyStack myStack;
     @Before
     public void setUp() throws Exception {
-        myStack = new MyStackByListImpl<>();
+        myStack = new MyStackByArrayImpl<>();
         myStack.printStack();
     }
 
@@ -49,11 +49,35 @@ public class MyStackTest {
         myStack.push(9);
         myStack.push(10);
         myStack.push(1);
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
         System.out.println(myStack.length());
     }
 
     @Test
     public void testPush() throws Exception {
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
+        myStack.push(4);
+        myStack.push(9);
+        myStack.push(10);
+        myStack.push(1);
         myStack.push(4);
         myStack.push(9);
         myStack.push(10);
