@@ -1,4 +1,4 @@
-package Stack.MyStack;
+package Stack_Queue.MyStack;
 
 /**
  * Created by ZihanCong on 16/6/14.
