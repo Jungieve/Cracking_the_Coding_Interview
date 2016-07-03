@@ -10,6 +10,7 @@ public interface MyStack<T> {
     void clear();
     int length();
     T push(T item);
-    T pop(T item);
+    T pop();
     T peek();
+    void printStack();
 }

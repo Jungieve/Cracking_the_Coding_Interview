@@ -25,12 +25,17 @@ public class MyStackByArrayImpl<T> implements MyStack<T>{
     }
 
     @Override
-    public T pop(T item) {
+    public T pop() {
         return null;
     }
 
     @Override
     public T peek() {
         return null;
+    }
+
+    @Override
+    public void printStack() {
+
     }
 }

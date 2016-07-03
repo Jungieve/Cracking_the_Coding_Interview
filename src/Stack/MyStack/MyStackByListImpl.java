@@ -1,6 +1,5 @@
 package Stack.MyStack;
 
-import List.ListNode;
 
 import java.util.EmptyStackException;
 
@@ -9,7 +8,7 @@ import java.util.EmptyStackException;
  */
 public class MyStackByListImpl<T> implements MyStack<T> {
     private int size;
-    private ListNode top;
+    private Node top;
 
     @Override
     public boolean isEmpty() {
@@ -30,7 +29,7 @@ public class MyStackByListImpl<T> implements MyStack<T> {
     @Override
     public T push(T item) {
         //push时候,每次把新的结点增加到链表前面
-        ListNode listNode = new ListNode(item);
+        Node listNode = new Node(item);
         //如果没有元素
         if (top == null)
             top = listNode;
@@ -43,7 +42,7 @@ public class MyStackByListImpl<T> implements MyStack<T> {
     }
 
     @Override
-    public T pop(T item) {
+    public T pop() {
         //通过调用peek函数预先判断stack是否为空
         T obj = peek();
         top = top.next;
@@ -56,5 +55,14 @@ public class MyStackByListImpl<T> implements MyStack<T> {
         if (size == 0)
             throw new EmptyStackException();
         return (T) top.val;
+    }
+
+    @Override
+    public void printStack() {
+        Node dummy = top;
+        while(dummy!=null){
+            System.out.print(dummy.val+"->");
+            dummy = dummy.next;
+        }
     }
 }
