@@ -3,7 +3,6 @@ package Stack.MyStack;
 import List.ListNode;
 
 import java.util.EmptyStackException;
-import java.util.LinkedList;
 
 /**
  * Created by ZihanCong on 16/7/3.
@@ -11,10 +10,12 @@ import java.util.LinkedList;
 public class MyStackByListImpl<T> implements MyStack<T> {
     private int size;
     private ListNode top;
+
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
+
     @Override
     public void clear() {
         top = null;
@@ -31,9 +32,9 @@ public class MyStackByListImpl<T> implements MyStack<T> {
         //push时候,每次把新的结点增加到链表前面
         ListNode listNode = new ListNode(item);
         //如果没有元素
-        if(top == null)
+        if (top == null)
             top = listNode;
-        else{
+        else {
             listNode.next = top;
             top = listNode;
         }
@@ -52,8 +53,8 @@ public class MyStackByListImpl<T> implements MyStack<T> {
 
     @Override
     public T peek() {
-        if(size == 0)
+        if (size == 0)
             throw new EmptyStackException();
-        return (T)top.val;
+        return (T) top.val;
     }
 }
