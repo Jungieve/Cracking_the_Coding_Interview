@@ -21,10 +21,10 @@ public class TwoStacks {
             if(stack2.isEmpty())
                 stack2.push(item);
             else{
-                while(stack2.isEmpty() == false && item<stack2.peek())
+                while(!stack2.isEmpty() && item<stack2.peek())
                     stack1.push(stack2.pop());
                 stack2.push(item);
-                while(stack1.isEmpty() == false && stack1.peek()>item)
+                while(!stack1.isEmpty() && stack1.peek()>item)
                     stack2.push(stack1.pop());
             }
             stack1.pop();
