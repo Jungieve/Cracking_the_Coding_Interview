@@ -7,15 +7,18 @@ public class Balance {
     public boolean isBalance(TreeNode root) {
         // write code here
         if(root == null)	return true;
-        int rightHeight = getHeight(root.right,1);
-        int leftHeight = getHeight(root.left,1);
-        return ((rightHeight-leftHeight)<=1 && (rightHeight-leftHeight)>=-1);
+        int rightHeight = getHeight(root.right);
+        int leftHeight = getHeight(root.left);
+        if(Math.abs(rightHeight-leftHeight)<1)
+            return isBalance(root.left)&&isBalance(root.right);
+        else
+            return false;
 
     }
-    public int getHeight(TreeNode root,int temp){
-        if(root == null)	return temp-1;
-        int rightHeight = getHeight(root.right,temp+1);
-        int leftHeight = getHeight(root.left,temp+1);
-        return (rightHeight>leftHeight)?rightHeight:leftHeight;
+    public int getHeight(TreeNode root){
+        if(root == null)	return 0;
+        int rightHeight = getHeight(root.right);
+        int leftHeight = getHeight(root.left);
+        return Math.max(rightHeight,leftHeight)+1;
     }
 }
