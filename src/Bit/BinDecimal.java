@@ -9,7 +9,7 @@ public class BinDecimal {
         StringBuffer result = new StringBuffer();
         result.append('0');
         result.append('.');
-        for(int i = 0;i<8;i++){
+        for(int i = 0;i<32;i++){
             num *= 2;
             if(num >= 1){
                 num -= 1;
